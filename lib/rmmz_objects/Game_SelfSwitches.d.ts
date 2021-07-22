@@ -1,21 +1,20 @@
-
 interface selfSwitches {
-    "A": boolean,
-    "B": boolean,
-    "C": boolean,
-    "D": boolean
+  A: boolean;
+  B: boolean;
+  C: boolean;
+  D: boolean;
 }
+
 declare class Game_SelfSwitches {
+  private _data: selfSwitches;
 
-    private _data: selfSwitches;
+  constructor();
 
-    constructor();
-
-    public initialize(): void;
-    public clear(): void;
-    public value(key: string): selfSwitches;
-    public setValue(key: string, value: boolean): void;
-    public onChange(): void;
+  public initialize(): void;
+  public clear(): void;
+  public value(key: string): selfSwitches;
+  public setValue(key: string, value: boolean): void;
+  public onChange(): void;
 }
 
-export { Game_SelfSwitches }
+export { Game_SelfSwitches };
