@@ -8,33 +8,33 @@ import { Sprite } from '..';
 
 import { Game_Battler } from "../rmmz_objects";
 
-declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
-    protected _backgroundFilter: Filter;
-    protected _backgroundSprite: Sprite;
-    protected _back1Sprite: Sprite;
-    protected _back2Sprite: Sprite;
+declare interface Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
+    _backgroundFilter: Filter;
+    _backgroundSprite: Sprite;
+    _back1Sprite: Sprite;
+    _back2Sprite: Sprite;
 
-    constructor();
+    initialize();
 
-    public createBackground(): void;
-    public createBattleback(): void;
-    public createBattleField(): void;
+    createBackground(): void;
+    createBattleback(): void;
+    createBattleField(): void;
 
-    public battleFieldOffsetY(): number;
+    battleFieldOffsetY(): number;
 
-    public updateBattleback(): void;
+    updateBattleback(): void;
 
-    public createEnemies(): void;
-    public compareEnemySprite(a: Sprite_Battler, b: Sprite_Battler): number;
+    createEnemies(): void;
+    compareEnemySprite(a: Sprite_Battler, b: Sprite_Battler): number;
 
-    public createActors(): void;
-    public updateActors(): void;
+    createActors(): void;
+    updateActors(): void;
 
-    public battlerSprites(): Sprite_Battler[];
+    battlerSprites(): Sprite_Battler[];
 
-    public isEffecting(): boolean;
-    public isAnyoneMoving(): boolean;
-    public isBusy(): boolean;
+    isEffecting(): boolean;
+    isAnyoneMoving(): boolean;
+    isBusy(): boolean;
 }
 
 export { Spriteset_Battle };
