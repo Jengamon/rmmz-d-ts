@@ -8,35 +8,36 @@ import { Sprite } from '..';
 
 import { Game_Battler } from "../rmmz_objects";
 
-declare interface Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
-    _backgroundFilter: Filter;
-    _backgroundSprite: Sprite;
-    _back1Sprite: Sprite;
-    _back2Sprite: Sprite;
+declare class Spriteset_BattleClass extends Spriteset_Base<Game_Battler, Sprite_Battler> {
+    protected _backgroundFilter: Filter;
+    protected _backgroundSprite: Sprite;
+    protected _back1Sprite: Sprite;
+    protected _back2Sprite: Sprite;
 
-    initialize: () => void;
+    constructor();
 
-    createBackground: () => void;
-    createBattleback: () => void;
-    createBattleField: () => void;
+    public createBackground(): void;
+    public createBattleback(): void;
+    public createBattleField(): void;
 
-    battleFieldOffsetY: () => number;
+    public battleFieldOffsetY(): number;
 
-    updateBattleback: () => void;
+    public updateBattleback(): void;
 
-    createEnemies: () => void;
-    compareEnemySprite: (a: Sprite_Battler, b: Sprite_Battler) => number;
+    public createEnemies(): void;
+    public compareEnemySprite(a: Sprite_Battler, b: Sprite_Battler): number;
 
-    createActors: () => void;
-    updateActors: () => void;
+    public createActors(): void;
+    public updateActors(): void;
 
-    battlerSprites: () => Sprite_Battler[];
+    public battlerSprites(): Sprite_Battler[];
 
-    isEffecting: () => boolean;
-    isAnyoneMoving: () => boolean;
-    isBusy: () => boolean;
+    public isEffecting(): boolean;
+    public isAnyoneMoving(): boolean;
+    public isBusy(): boolean;
 }
 
-declare let Spriteset_Battle: Spriteset_Battle;
+// eslint-disable-next-line no-var
+declare var Spriteset_Battle: Spriteset_BattleClass;
 
-export { Spriteset_Battle };
+export { Spriteset_Battle, Spriteset_BattleClass };
