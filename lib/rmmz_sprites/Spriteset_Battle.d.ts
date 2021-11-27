@@ -2,11 +2,15 @@
  * @author Brandt (Masked)
  */
 
+import { Filter } from 'pixi.js';
 import { Spriteset_Base, Sprite_Battler } from '.';
+import { Sprite } from '..';
 
 import { Game_Battler } from "../rmmz_objects";
 
 declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
+    protected _backgroundFilter: Filter;
+    protected _backgroundSprite: Sprite;
 
     constructor();
 

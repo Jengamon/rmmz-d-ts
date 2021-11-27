@@ -14,6 +14,7 @@ export * from './Sprite_Gauge';
 export * from './Sprite_Name';
 export * from './Sprite_StateIcon';
 export * from './Sprite_StateOverlay';
+export * from './Sprite_Timer';
 export * from './Sprite_Weapon';
 export * from './Spriteset_Base';
 export * from './Spriteset_Battle';
