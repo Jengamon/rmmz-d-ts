@@ -37,4 +37,9 @@ declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battl
     public isBusy(): boolean;
 }
 
+declare namespace window {
+    // eslint-disable-next-line no-var
+    var Spriteset_Battle: Spriteset_Battle;
+}
+
 export { Spriteset_Battle };
