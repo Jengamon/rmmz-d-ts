@@ -75,6 +75,26 @@ As the project is open to contribution there's specific rules to follow :
 - Always follow linter suggestions, specially ones that concern the type
   definitions (e.g. not using `any`, `Function` and other unrestrictive types).
 
+- Make sure that if your exposing a class, expose a way to rewrite it! For example, if exposing
+  `Sprite_Temp`, make sure to add to the file below the class declaration:
+  ```ts
+  declare global {
+    interface Window {
+      Sprite_Temp: new (...: any[]) => Sprite_Temp;
+    }
+  }
+  ```
+  replacing `...: any[]` with the actual signature used in RMMZ to call the class.
+
+  If exposing an object, for example `Game_Actors` as `$dataActors` make sure to add
+  ```ts
+  declare global {
+    interface Window {
+      $dataActors: Game_Actors
+    }
+  }
+  ```
+
 
 # Terms of Use
 
