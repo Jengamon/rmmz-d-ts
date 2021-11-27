@@ -16,6 +16,12 @@ declare class ColorFilter extends PIXI.Filter {
 
 }
 
+declare global {
+    interface Window {
+        ColorFilter: new () => ColorFilter;
+    }
+}
+
 export {
     ColorFilter,
     ColorTone

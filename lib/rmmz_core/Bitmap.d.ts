@@ -65,4 +65,11 @@ declare class Bitmap {
 
 }
 
+
+declare global {
+    interface Window {
+        Bitmap: new (width: number, height: number) => Bitmap;
+    }
+}
+
 export { Bitmap };

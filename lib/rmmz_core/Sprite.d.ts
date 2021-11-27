@@ -22,7 +22,12 @@ declare class Sprite extends PIXI.Sprite {
     public show(): void;
     public update(): void;
     public updateVisibility(): void;
+}
 
+declare global {
+    interface Window {
+        Sprite: new (bitmap?: Bitmap) => Sprite;
+    }
 }
 
 export {

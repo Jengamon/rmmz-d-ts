@@ -14,4 +14,10 @@ declare class Weather extends PIXI.Container {
     public destroy(): void;
 }
 
+declare global {
+    interface Window {
+        Weather: new () => Weather;
+    }
+}
+
 export { Weather };

@@ -31,4 +31,10 @@ declare class WebAudio {
 
 }
 
+declare global {
+    interface Window {
+        WebAudio: new (url: string) => WebAudio;
+    }
+}
+
 export { WebAudio };

@@ -6,4 +6,10 @@ declare class Stage extends PIXI.Container {
     public destroy(): void;
 }
 
+declare global {
+    interface Window {
+        Stage: new () => Stage;
+    }
+}
+
 export { Stage };

@@ -6,11 +6,13 @@ declare class Tilemap extends PIXI.Container {
 
     public animationCount: number;
     public flags: number[];
-    public height: number;
+    public get height(): number;
+    public set height(height: number);
     public horizontalWrap: boolean;
     public origin: Point;
     public verticalWrap: boolean;
-    public width: number;
+    public get width(): number;
+    public set width(width: number);
 
     constructor();
 
@@ -21,6 +23,12 @@ declare class Tilemap extends PIXI.Container {
     public update(): void;
     public updateTransform(): void;
 
+}
+
+declare global {
+    interface Window {
+        Tilemap: new () => Tilemap;
+    }
 }
 
 export { Tilemap };

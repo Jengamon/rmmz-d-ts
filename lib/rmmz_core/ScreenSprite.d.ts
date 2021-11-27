@@ -14,4 +14,10 @@ declare class ScreenSprite extends PIXI.Container {
 
 }
 
+declare global {
+    interface Window {
+        ScreenSprite: new () => ScreenSprite;
+    }
+}
+
 export { ScreenSprite };

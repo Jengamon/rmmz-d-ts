@@ -9,4 +9,10 @@ declare class WindowLayer extends PIXI.Container {
 
 }
 
+declare global {
+    interface Window {
+        WindowLayer: new () => WindowLayer;
+    }
+}
+
 export { WindowLayer };

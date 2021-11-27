@@ -20,4 +20,10 @@ declare class TilingSprite extends PIXI.TilingSprite {
 
 }
 
+declare global {
+    interface Window {
+        TilingSprite: new () => TilingSprite;
+    }
+}
+
 export { TilingSprite };

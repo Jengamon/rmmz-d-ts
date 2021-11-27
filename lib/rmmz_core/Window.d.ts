@@ -12,7 +12,8 @@ declare class Window extends PIXI.Container {
     public cursorVisible: boolean;
     public downArrowVisible: boolean;
     public frameVisible: boolean;
-    public height: number;
+    public get height(): number;
+    public set height (height: number);
 
     public readonly innerHeight: number;
     public readonly innerRect: Rectangle;
@@ -25,7 +26,8 @@ declare class Window extends PIXI.Container {
     public padding: number;
     public pause: boolean;
     public upArrowVisible: boolean;
-    public width: number;
+    public get width(): number;
+    public set width(width: number);
     public windowskin: Bitmap;
 
     constructor();
@@ -49,6 +51,12 @@ declare class Window extends PIXI.Container {
     public update(): void;
     public updateTransform(): void;
 
+}
+
+declare global {
+    interface Window {
+        Window: new () => Window;
+    }
 }
 
 export { Window };
