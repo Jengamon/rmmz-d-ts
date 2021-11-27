@@ -9,7 +9,7 @@ declare class Sprite extends PIXI.Sprite {
     public bitmap: Bitmap;
     public opacity: number;
 
-    constructor(bitmap: Bitmap);
+    constructor(bitmap?: Bitmap);
 
     public getBlendColor(): RGBA
     public getColorTone(): RGBA
