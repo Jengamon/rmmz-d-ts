@@ -8,7 +8,7 @@ import { Sprite } from '..';
 
 import { Game_Battler } from "../rmmz_objects";
 
-declare class Spriteset_BattleClass extends Spriteset_Base<Game_Battler, Sprite_Battler> {
+declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
     protected _backgroundFilter: Filter;
     protected _backgroundSprite: Sprite;
     protected _back1Sprite: Sprite;
@@ -37,7 +37,4 @@ declare class Spriteset_BattleClass extends Spriteset_Base<Game_Battler, Sprite_
     public isBusy(): boolean;
 }
 
-// eslint-disable-next-line no-var
-declare var Spriteset_Battle: Spriteset_BattleClass;
-
-export { Spriteset_Battle, Spriteset_BattleClass };
+export { Spriteset_Battle };
