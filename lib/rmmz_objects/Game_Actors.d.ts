@@ -8,3 +8,9 @@ declare class Game_Actors {
   public initialize(): void;
   public actor(actorId: number): Game_Actor | null;
 }
+
+declare global {
+  interface Window {
+    $gameActors: Game_Actors
+  }
+}

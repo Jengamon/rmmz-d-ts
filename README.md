@@ -86,11 +86,11 @@ As the project is open to contribution there's specific rules to follow :
   ```
   replacing `...: any[]` with the actual signature used in RMMZ to call the class.
 
-  If exposing an object, for example `Game_Actors` as `$dataActors` make sure to add
+  If exposing an object, for example `Game_Actors` as `$gameActors` make sure to add
   ```ts
   declare global {
     interface Window {
-      $dataActors: Game_Actors
+      $gameActors: Game_Actors
     }
   }
   ```
