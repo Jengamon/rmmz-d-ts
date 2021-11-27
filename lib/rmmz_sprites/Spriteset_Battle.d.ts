@@ -39,7 +39,7 @@ declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battl
 
 declare global {
     interface Window {
-        Spriteset_Battle: Spriteset_Battle;
+        Spriteset_Battle: new () => Spriteset_Battle;
     }
 }
 
