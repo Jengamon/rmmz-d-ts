@@ -14,27 +14,29 @@ declare interface Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_B
     _back1Sprite: Sprite;
     _back2Sprite: Sprite;
 
-    initialize();
+    initialize: () => void;
 
-    createBackground(): void;
-    createBattleback(): void;
-    createBattleField(): void;
+    createBackground: () => void;
+    createBattleback: () => void;
+    createBattleField: () => void;
 
-    battleFieldOffsetY(): number;
+    battleFieldOffsetY: () => number;
 
-    updateBattleback(): void;
+    updateBattleback: () => void;
 
-    createEnemies(): void;
-    compareEnemySprite(a: Sprite_Battler, b: Sprite_Battler): number;
+    createEnemies: () => void;
+    compareEnemySprite: (a: Sprite_Battler, b: Sprite_Battler) => number;
 
-    createActors(): void;
-    updateActors(): void;
+    createActors: () => void;
+    updateActors: () => void;
 
-    battlerSprites(): Sprite_Battler[];
+    battlerSprites: () => Sprite_Battler[];
 
-    isEffecting(): boolean;
-    isAnyoneMoving(): boolean;
-    isBusy(): boolean;
+    isEffecting: () => boolean;
+    isAnyoneMoving: () => boolean;
+    isBusy: () => boolean;
 }
+
+declare let Spriteset_Battle: Spriteset_Battle;
 
 export { Spriteset_Battle };
