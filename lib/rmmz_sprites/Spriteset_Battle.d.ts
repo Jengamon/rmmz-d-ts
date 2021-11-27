@@ -11,6 +11,8 @@ import { Game_Battler } from "../rmmz_objects";
 declare class Spriteset_Battle extends Spriteset_Base<Game_Battler, Sprite_Battler> {
     protected _backgroundFilter: Filter;
     protected _backgroundSprite: Sprite;
+    protected _back1Sprite: Sprite;
+    protected _back2Sprite: Sprite;
 
     constructor();
 
