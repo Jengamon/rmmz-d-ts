@@ -8,7 +8,7 @@ declare class TilingSprite extends PIXI.TilingSprite {
     public opacity: number;
     public origin: Point;
 
-    constructor();
+    constructor(bitmap?: Bitmap);
 
     public move(x: number, y: number, width: number, height: number): void;
     public setFrame(x: number, y: number, width: number, height: number): void;
@@ -22,7 +22,7 @@ declare class TilingSprite extends PIXI.TilingSprite {
 
 declare global {
     interface Window {
-        TilingSprite: new () => TilingSprite;
+        TilingSprite: new (bitmap?: Bitmap) => TilingSprite;
     }
 }
 
