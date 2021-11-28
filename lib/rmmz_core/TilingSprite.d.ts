@@ -10,7 +10,7 @@ declare class TilingSprite extends PIXI.TilingSprite {
 
     constructor(bitmap?: Bitmap);
 
-    public move(x: number, y: number, width: number, height: number): void;
+    public move(x?: number, y?: number, width?: number, height?: number): void;
     public setFrame(x: number, y: number, width: number, height: number): void;
 
     public update(): void;
