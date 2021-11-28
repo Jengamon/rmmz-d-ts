@@ -47,7 +47,7 @@ declare class Bitmap {
 
     public destroy(): void;
 
-    public drawCircle(x: number, y: number, radius: number, color: number): void;
+    public drawCircle(x: number, y: number, radius: number, color: string): void;
     public drawText(text: string | number, x: number, y: number, maxWidth: number, lineHeight:number, align: string): void;
 
     public fillAll(color: string): void;
